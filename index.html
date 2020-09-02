@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="htm" href="game.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Play Hangman!</title>
+  </head>
+  <body>
+    <div class="welcome center">
+      <h1 class="hide">Welcome to Hangman!</h1>
+      <button class="hide" onclick="initGame()">
+        Start Game
+      </button>
+    </div>
+    <div class="gamearea center">
+      <p class="hide">
+        <strong>Instructions:</strong>
+      </p>
+      <p class="hide">
+        Try to guess the secret word one letter at a time! If you guess an
+        incorrect letter, the lives will get reduced. You will have 5 lives for
+        the entire game. To win, spell the word before all your lives are
+        finished. Lives will get reset for every next Question.
+        <strong>Happy Gaming!</strong>
+      </p>
+      <button class="hide" onclick="setDevice()">
+        Go!
+      </button>
+    </div>
+    <div class="pc-or-mobile center">
+      <h1>Mobile Or PC</h1>
+      <button onclick="keyboard()">I'm on PC</button>
+      <button onclick="mobile()">I'm on Mobile</button>
+    </div>
+    <div class="start">
+        <div class="instruction-container center">
+          <h1>
+            Guess the word
+          </h1>
+          <p id="hint"></p>
+          <p class="device-keyboard">Press your keyboard letter.</p>
+          <p class="device-mobile">Touch the letter element below to select.</p>
+        </div>
+        <div id="score">Lives : 5</div>
+      </div>
+      <div class="word-container"></div>
+      <div class="letters-container"></div>
+    </div>
+    <button onclick="location.reload()">Restart</button>
+    <script src="index.js"></script>
+  </body>
+</html>
